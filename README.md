@@ -8,13 +8,22 @@
 
 
 ## 运行步骤
-1.demo1 原生版   ==>   cd/views/redux-html   ==>点击index.html
+1.demo1 原生版   ==>
 2.demo2  react+redux
  ==> cd/views/react_redux
  ==> npm install
  ==> npm run build
  ==> npm run start
   
+项目1-原生版: ` cd/views/redux-html   ==>   点击index.html `  —— 直接运行在chrome
+
+
+项目2-redux+reacrt:
+1. ` cd/views/redux-html ` ——切换目录
+2. ` npm install` --下载依赖
+3. ` npm run build` --编译
+4. ` npm run start` --运行 自己打开chrome 默认端口3000
+
 
 ## 项目目录结构
 
@@ -22,13 +31,13 @@
 项目
 
     |__ views     //视图
-        |__redux-html    //原生版
-            |__index.html   //script reudx.js
-        |__react_reudx    //react+redux 实现的demo
+        |__redux-html    //demo1
+            |__index.html
+        |__react_reudx    //demo2
             |__ node_modules 依赖
-            |__build    //编译出来的js
+            |__build    //编译
             |__public    //模板
-            |__src  //代码位置
+            |__src
                 |__components  //组件
                 |__ reducres  //数据源处理
                 |__index.js   //首页
