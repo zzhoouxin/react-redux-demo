@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redux联系</title>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+</head>
+<body>
+<div>
+    <p>
+        点击了: <span id="value">0</span> 次
+        <button id="add">+</button>
+        <button id="less">-</button>
+    </p>
+</div>
+
+<script>
+    //这边创建一个reducer 用来处理值.类似于flux store的作用
+    function reducer(state, action) {
+        console.log("11")
+        if (typeof state == "undefined") {
+            return 0;
+        }
+        switch (action.type) {
+            case "add":
+                return state + 1;
+            case "less":
+                return state - 1;
+            default:
+                return state;
+        }
+    }
+
+    //这边创建一个store,Redux 应用只有一个单一的 store。当需要拆分数据处理逻辑时，你应该使用 reducer 组合 而不是创建多个 store。
+    var store = Redux.createStore(reducer);
+
+    //获取dom节点
+    var value = document.getElementById("value");
+
+    //重新渲染数据
+    function render() {
+        value.innerHTML = store.getState().toString();
+    }
+
+    //每次store值发生改变的时候。触发监听的函数
+    store.subscribe(render)
+
+
+    document.getElementById('add')
+        .addEventListener('click', function () {
+            store.dispatch({type: 'add'})
+        })
+
+    document.getElementById('less')
+        .addEventListener('click', function () {
+            store.dispatch({type: 'less'})
+        })
+
+</script>
+
+</body>
+</html>
