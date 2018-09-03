@@ -23,17 +23,25 @@
 项目
 
     |__ views     //视图
+        |
         |__redux-html    //demo1
+            |   
             |__index.html
             
             
         |__react_reudx    //demo2
+            |
             |__ node_modules 依赖
+            |
             |__build    //编译
+            |
             |__public    //模板
+            |
             |__src
                 |__components  //组件
+                |
                 |__ reducres  //数据源处理
+                |
                 |__index.js   //首页
 
 
