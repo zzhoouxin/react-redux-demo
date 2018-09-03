@@ -27,19 +27,19 @@
         |
         |__redux-html    //demo1
             |   
-            |__index.html
+            |__index.html   //直接script redux.js 实现功能
             
             
         |__react_reudx    //demo2
             |
             |__ node_modules 依赖
             |
-            |__build    //编译
+            |__build    //编译出来的jS
             |
             |__public    //模板
             |
             |__src
-                |__components  //组件
+                |__components  //组件代码
                 |
                 |__ reducres  //数据源处理
                 |
