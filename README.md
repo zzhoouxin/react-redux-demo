@@ -8,15 +8,7 @@
 
 
 ## 运行步骤
-1.demo1 原生版   ==>
-2.demo2  react+redux
- ==> cd/views/react_redux
- ==> npm install
- ==> npm run build
- ==> npm run start
-  
 项目1-原生版: ` cd/views/redux-html   ==>   点击index.html `  —— 直接运行在chrome
-
 
 项目2-redux+reacrt:
 1. ` cd/views/redux-html ` ——切换目录
@@ -33,6 +25,8 @@
     |__ views     //视图
         |__redux-html    //demo1
             |__index.html
+            
+            
         |__react_reudx    //demo2
             |__ node_modules 依赖
             |__build    //编译
